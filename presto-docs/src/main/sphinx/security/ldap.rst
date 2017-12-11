@@ -10,8 +10,8 @@ and password to the coordinator and coordinator validates these
 credentials using an external LDAP service.
 
 To enable LDAP authentication for Presto, configuration changes are made on
-the Presto coordinator. No changes are required to the worker configuration;
-only the communication from the clients to the coordinator is authenticated.
+the Presto coordinator. If you want to enable SSL for the entire cluster follow
+:doc:`/security/internal-communication`.
 
 Presto Server Configuration
 ---------------------------

@@ -7,18 +7,12 @@ HTTPS for clients, such as the :doc:`Presto CLI </security/cli>`, or the
 JDBC and ODBC drivers.
 
 To enable Kerberos authentication for Presto, configuration changes are made on
-the Presto coordinator. No changes are required to the worker configuration;
-the worker nodes will continue to connect to the coordinator over
-unauthenticated HTTP.
+the Presto coordinator. If you want to enable SSL for the entire cluster follow
+:doc:`/security/internal-communication`.
 
 .. warning::
 
-  Worker nodes cannot yet be configured to connect to the Presto coordinator
-  using HTTPS or to authenticate with Kerberos. It is the administrator's
-  responsibility to enable unauthenticated access over HTTP for worker nodes
-  and ensure unathenticated access is blocked for any node that is not a worker
-  node. For nodes that are not worker nodes, block access to the Presto
-  coordinator's HTTP port.
+  Worker nodes cannot yet be configured to authenticate with Kerberos.
 
 Environment Configuration
 -------------------------
